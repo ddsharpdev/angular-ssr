@@ -9,11 +9,13 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { delay } from 'rxjs';
+import { DeferredAComponent } from './deferred-a/deferred-a.component';
+import { DeferredBComponent } from './deferred-b/deferred-b.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, DeferredAComponent, DeferredBComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -34,7 +36,7 @@ export class AppComponent implements OnInit {
 
   constructor() {
     console.log('constructor is generated in both the server and the browser.');
-    this.transferState.set(this.STATE_KEY, 10);
+    // this.transferState.set(this.STATE_KEY, 10);
   }
 
   buttonClick() {

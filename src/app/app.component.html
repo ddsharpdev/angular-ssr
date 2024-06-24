@@ -1,13 +1,29 @@
-<button (click)="buttonClick()">increment</button>
-<br />
-{{ i }}
-<br />
-<button (click)="sendRequestWithDelay()">sendRequestWithDelay</button>
-<button (click)="sendRequestWithTimeout()">sendRequestWithTimeout</button>
-@if(todoDelay) {
-<pre>todoDelay: {{ todoDelay | json }}</pre>
-} @if(todoTimeout) {
-<pre>todoTimeout: {{ todoTimeout | json }}</pre>
-}
+<!-- <details>
+  <summary>SSR state</summary>
+  <div>
+    <button (click)="buttonClick()">increment</button>
+    <br />
+    {{ i }}
+    <br />
+    <button (click)="sendRequestWithDelay()">sendRequestWithDelay</button>
+    <button (click)="sendRequestWithTimeout()">sendRequestWithTimeout</button>
+    @if(todoDelay) {
+    <pre>todoDelay: {{ todoDelay | json }}</pre>
+    } @if(todoTimeout) {
+    <pre>todoTimeout: {{ todoTimeout | json }}</pre>
+    }
+  </div>
+</details> -->
+
+<details open>
+  <summary>Deferred</summary>
+  <div>
+    @defer {
+    <app-deferred-a></app-deferred-a>
+    } @placeholder (minimum 1500ms) {
+    <p>Placeholder content for Deferred A</p>
+    }
+  </div>
+</details>
 
 <router-outlet></router-outlet>
