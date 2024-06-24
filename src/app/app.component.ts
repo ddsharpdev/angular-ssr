@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('ngOnInit is generated in both the server and the browser.');
-    this.sendRequestWithDelay();
-    this.sendRequestWithTimeout();
+    // this.sendRequestWithDelay();
+    // this.sendRequestWithTimeout();
   }
 
   constructor() {

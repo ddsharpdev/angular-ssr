@@ -27,13 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              {
-                "input": "src/test.js",
-                "inject": false,
-                "bundleName": "test"
-              }
-            ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
